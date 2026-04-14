@@ -3,6 +3,10 @@
   src: url("./fonts/Poppins-Light.ttf") format("truetype");
 }
 @font-face {
+  font-family: "PoppinsB";
+  src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
   font-family: "Lora";
   src: url("./fonts/Lora-VariableFont_wght.ttf") format("truetype");
 }
@@ -24,13 +28,13 @@ body {
   text-align: center;
 }
 .dataframe {
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   border: none;
 }
-.dt-container {
+/* .dt-container {
   /* max-height: 500px; */
-  overflow: hidden;
-}
+  /* overflow: hidden; */
+/* } */ 
 .dt-column-order{
   background: #000;
   color: #fff;
@@ -126,7 +130,6 @@ body {
 .template {
   font-family: "poppins", serif;
   margin-top: 1rem;
-
   border: 1px solid #cbd5e1;
   box-shadow: 1px 1px 20px -6px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
@@ -243,22 +246,29 @@ input[type="file"] {
 #hide {
   display: none;
 }
-.dt-layout-row {
+.dt-layout-row:nth-child(1) {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between;
   margin: 1rem;
 }
-.dt-layout-full {
-  width: 100%;
+.dt-layout-row{
+  margin: 1rem;
 }
+/* .dt-layout-full {
+  width: 100%;
+} */
 .dt-search .dt-input{
   border-radius: 0.55rem;
   padding: 0.5rem 1rem;
   font-family: 'poppins', serif;
-  border: 3px solid #cbd5e1;
+  border: 1px solid #a3a3a3;
+  background: #fafafa;
 }
+/* .dt-scroll-body thead{
+  display: none;
+} */
 
 .dt-length  {
   font-weight: bold;
@@ -341,3 +351,96 @@ input[type="file"] {
 .placeholder .p2 {
   font-size: 0.75rem;
 }
+.dt-paging button{
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.Overall_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  gap: 1.5rem;
+}
+.Overall_container div{
+    width: 25%;
+    font-family: 'PoppinsB', serif;
+}
+.Overall_container p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.Overall_container p:nth-child(2) {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #7b7b7b;
+}
+.flexing{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  gap: 1.5rem;
+}
+:root {
+    --bg-light: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #f1f5f9;
+    --rank-1-bg: #1a1a1a;
+    --rank-other-bg: #f1f5f9;
+}
+
+.ranking-container {
+    font-family: 'Inter', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    color: var(--text-main);
+}
+
+.ranking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ranking-header h2 { margin: 0; font-size: 1.5rem; font-weight: 800; }
+.subtitle { margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem; }
+
+/* Hide the standard table header since we want a clean look */
+#rankingTable thead { display: none; }
+
+/* Remove default table borders and background */
+#rankingTable, #rankingTable td, #rankingTable tr {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* The Card Styling */
+.ranking-card {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 18px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Spacing between cards */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Rest of your card CSS (Badge, Name, Score) */
+.rank-badge { width: 50px; height: 50px; border-radius: 14px; display: flex; 
+              align-items: center; justify-content: center; font-weight: 700; margin-right: 20px; }
+.rank-1 { background: #1a1a1a; color: white; }
+.rank-others { background: #f1f5f9; color: #1e293b; }
+.student-info { flex-grow: 1; }
+.student-name { font-weight: 700; font-size: 1.15rem; }
+.student-id { color: #94a3b8; font-size: 0.85rem; }
+.score-info { text-align: right; }
+.average-score { font-weight: 800; font-size: 1.3rem; }
+.score-label { color: #94a3b8; font-size: 0.8rem; }

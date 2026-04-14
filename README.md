@@ -1,4 +1,6 @@
-# et
+# GradeLens - student data analyzer
+
+###
 
 To install dependencies:
 
@@ -6,10 +8,20 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To install library:
 
 ```bash
-bun run index.ts
+pip install -r requirements.txt
 ```
 
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+to bundle js
+
+```bash
+bun build ./static/interact.js --outfile ./static/js/bundle.js --watch
+```
+
+to run app
+
+```bash
+python app.py
+```

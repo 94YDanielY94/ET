@@ -11932,7 +11932,6 @@ jquery_module_default(document).ready(function() {
     responsive: true,
     filter: true,
     paging: true,
-    order: [[3, "desc"]],
     info: false,
     pageLength: 10,
     autoFill: true,
@@ -11948,4 +11947,18 @@ jquery_module_default(document).ready(function() {
       }
     }
   });
+});
+jquery_module_default(document).ready(function() {
+  if (!jquery_module_default.fn.DataTable.isDataTable("#rankingTable")) {
+    jquery_module_default("#rankingTable").DataTable({
+      pageLength: 5,
+      lengthChange: false,
+      info: false,
+      dom: "frtp",
+      language: {
+        search: "",
+        searchPlaceholder: "Search for a student..."
+      }
+    });
+  }
 });
