@@ -1,0 +1,17 @@
+{
+  "name": "et",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "datatables": "^1.10.18",
+    "datatables.net-dt": "^2.3.7",
+    "interactjs": "^1.10.27"
+  }
+}
